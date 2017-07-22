@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:fb="http://ogp.me/ns/fb#">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Title</title>
+
+  <meta property="og:url"           content="" />
+  <meta property="og:type"          content="website" />
+  <meta property="og:title"         content="" />
+  <meta property="og:description"   content="" />
+  <meta property="og:image"         content="" />
+
+  <link rel="icon" type="image/png" href="/content/favicon.png">
+  <link rel="stylesheet" type="text/css" href="/styles/styles.css">
+
+  <!-- 3rd party libraries -->
+  <script src="/lib/vue.js"></script>
+  <script src="/lib/jquery-3.2.1.min.js"></script>
+  <script src="/lib/on-screen.umd.min.js"></script>
+  <script src="/lib/jquery.spincrement.min.js"></script>
+  <script src="/lib/fetch.js"></script>
+  <link rel="stylesheet" href="/lib/animate.min.css">
+</head>
+<body>
+  <div id="vm" class="">
+    <div class="centered-view">
+      <div class="greeting">{{greeting}}</div>
+    </div>
+  </div>
+
+  <script src="/scripts/scripts.js"></script>
+  <script>
+  var vm = new Vue({
+    el: '#vm',
+    data: () => ({
+      greeting: 'Hello, Vue!',
+    }),
+    methods: {
+
+    },
+    created: function () {
+
+    },
+  });
+  </script>
+</body>
+</html>
