@@ -1,11 +1,15 @@
 .centered-view {
-  padding: 200px 100px;
+  padding: 300px 100px;
   text-align: center;
-  background: #C6FF04;
-  color: #FF65AD;
+  // min-height: 100vh;
 
-  .greeting {
-    display: inline-block;
-    font-size: 32pt;
+  &.lime {
+    background: #C6FF04;
+    color: #FF65AD;
+  }
+
+  &.green {
+    background: #12A245;
+    color: #FFBB97;
   }
 }
