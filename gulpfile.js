@@ -3,12 +3,12 @@ const plumber = require('gulp-plumber');
 const sass = require('gulp-sass');
 const autoprefixer = require('gulp-autoprefixer');
 const csso = require('gulp-csso');
-const uglify = require('gulp-uglify');
+// const uglify = require('gulp-uglify');
 const concat = require('gulp-concat');
 const connect = require('gulp-connect');
 const del = require('del');
 
-// Combine all sass files
+// Assemble sass files into style.css
 gulp.task('styles', () => {
   return gulp.src('src/styles/main.scss')
     .pipe(plumber())
@@ -23,14 +23,12 @@ gulp.task('styles', () => {
     .pipe(connect.reload())
 });
 
-// Assemble scripts
+// Copy scripts
 gulp.task('scripts', () => {
-  return gulp.src([
-    'src/scripts/main.js'
-  ])
+  return gulp.src('src/scripts/**/*.js', { base: './src/' })
     .pipe(plumber())
-    .pipe(concat('scripts.js'))
-    .pipe(gulp.dest('dist/scripts'))
+    // .pipe(concat('scripts.js'))
+    .pipe(gulp.dest('dist'))
     .pipe(connect.reload())
 });
 
