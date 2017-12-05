@@ -91,7 +91,7 @@ const os = new OnScreen();
 os.on('enter', '.animated', (element, event) => {
   setTimeout(() => {
     const rnd = Math.round(Math.random() * effects.length);
-    $(element).removeClass();
-    $(element).addClass('animated ' + effects[rnd]);
+    element.className = '';
+    element.className = 'animated ' + effects[rnd];
   }, element.dataset.debounce || 0);
 });

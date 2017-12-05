@@ -6,7 +6,23 @@ const vm = new Vue({
     text: [],
   }),
   methods: {
+    edit: fields => {
+      const text = prompt('Enter text', fields[0]);
+      console.log(fields, text);
 
+      // fetch('https://cmstest-b1db.restdb.io/<collection>/ID', {
+      //   headers: {
+      //     "content-type": "application/json",
+      //     "x-apikey": "597f3006fc7b2b2169cafd8a",
+      //     "cache-control": "no-cache"
+      //   },
+      //   method: "post",
+      //   body: JSON.stringify({})
+      // }).then(res => res.json()).then(doc => {
+      //   console.log(doc[0]);
+      //   this.text = doc[0].list
+      // });
+    }
   },
   created: function () {
     /* *
@@ -35,7 +51,6 @@ const vm = new Vue({
     }).then(res => res.json()).then(doc => {
       console.log(doc[0]);
       this.text = doc[0].list
-
     });
 
   },
